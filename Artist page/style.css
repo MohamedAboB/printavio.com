@@ -1,0 +1,552 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --color1: #00a7ff;
+  --color2: #215077;
+  --color3: rgb(163, 206, 255) 0%;
+  --color5: rgb(79, 156, 232);
+}
+
+body {
+  overflow-x: hidden;
+}
+main {
+  margin-top: 68px;
+}
+
+section {
+  padding: 0px 10px 30px 10px;
+  margin: 0 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* ------------------------------------------- */
+.head-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+  width: 25%; /* Adjust width as needed */
+  margin-left: 35px;
+}
+
+.left-side .profile-picture img {
+  width: 180px;
+  border: none;
+  border-radius: 50%;
+}
+
+.left-side .profile-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7px;
+  margin-left: 10px;
+}
+.left-side .profile-info span {
+  padding: 10px;
+}
+.left-side .profile-info span h2 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.left-side .profile-info span p {
+  color: gray;
+  font-weight: bold;
+  font-size: 15px;
+}
+.left-side .profile-info .evaluation {
+  display: flex;
+}
+.left-side .profile-info .evaluation h4 {
+  font-weight: bold;
+  margin-right: 15px;
+}
+.left-side .profile-info .evaluation .stars i {
+  color: goldenrod;
+}
+.right-side {
+  width: 100%; /* Adjust width as needed */
+}
+
+.right-side .cover-picture img {
+  width: 100%;
+  height: 40vh;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+/* ----------Head section ------------------ */
+
+/* ----------------filter------------- */
+.body-content {
+  margin-top: 2%;
+  display: flex;
+  margin-bottom: 100px;
+}
+.body-content .filtration {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  width: 23%;
+  margin-left: 50px;
+}
+.body-content .filtration .inputs form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+}
+.body-content .filtration .inputs form label {
+  padding: 10px 0;
+}
+/* ---------------------------------- */
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 70%;
+  margin-right: 10px;
+}
+
+.product {
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+  transition: box-shadow 0.3s ease; /* Transition for hover effect */
+  width: 250px;
+  margin-bottom: 30px;
+  max-height: 55%;
+}
+
+.product:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.product a {
+  display: block; /* Make anchor tag a block element */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color */
+}
+
+.product img {
+  width: 100%;
+  border-radius: 5px;
+  height: auto;
+  transition: transform 0.3s ease;
+  display: block;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px; /* Add padding inside the card */
+}
+
+.product-name {
+  margin-bottom: 10px; /* Add space between name and price */
+}
+.product-name h3 {
+  font-weight: 200px;
+}
+.product-name span {
+  color: gray;
+  font-size: 12px;
+}
+
+.price {
+  display: flex; /* Make price section a flexbox */
+  justify-content: space-between; /* Space between price elements */
+  align-items: center;
+}
+.price p {
+  font-size: 25px;
+  font-weight: bold;
+}
+.price span {
+  color: red;
+  font-size: 18px;
+  font-weight: lighter;
+  text-decoration-line: line-through;
+}
+
+/* ---------------- filter price --------------- */
+.filtration hr {
+  width: 60%;
+}
+.range {
+  margin-top: 8%;
+}
+
+.range .title h4 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.range form {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 80%;
+  margin-left: 10px;
+}
+
+.range form label {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.range form input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.range form span {
+  font-size: 16px;
+  color: #333;
+}
+.range form label span strong {
+  color: #00a7ff;
+}
+
+/* ---------------- filter price --------------- */
+
+/* Start About Artist Section */
+.about-artist-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e1e1e1;
+}
+
+.about-artist-container {
+  max-width: 1400px; /* Maximum width of the content, you can adjust this */
+  width: 100%;
+  width: 95%;
+  margin: 10px auto;
+  margin-top: 10px;
+  background-color: white;
+  padding: 5%;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-info {
+  display: flex;
+  flex-direction: column;
+}
+.artist-info .head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.head .left-head {
+  display: flex;
+  align-items: center;
+}
+.artist-info .head .profile-img {
+  margin-right: 20px;
+}
+.artist-info .head .profile-img img {
+  width: 100px;
+  height: auto;
+}
+.artist-info .head .info h2 {
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.artist-info .head .info p {
+  font-weight: lighter;
+}
+
+.button2 {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.button2:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.button2:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: var(--color1);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:hover {
+  color: #ffffff;
+  border: 1px solid var(--color1);
+}
+
+.button2:hover:before {
+  top: -35%;
+  background-color: var(--color1);
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2:hover:after {
+  top: -45%;
+  background-color: var(--color1);
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.artist-info .follow_btn {
+  display: flex;
+  justify-content: space-between;
+}
+.artist-info .follow_btn button {
+  margin-left: 20px;
+}
+
+.artist-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+.artist-text-content h2 {
+  font-size: 1.5em; /* Adjust the size as needed */
+  margin-bottom: 10px;
+}
+
+.artist-text-content p {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6; /* Line height for paragraph text */
+}
+#caption {
+  max-width: 70%;
+  margin-bottom: 30px;
+}
+
+.artist-stats {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  margin: 30px 0;
+}
+.slach {
+  color: lightgray;
+}
+.achievements {
+  background-color: var(--color1);
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 30px;
+  margin-top: 10px;
+  color: var(--color2);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+  padding-top: 50px;
+}
+
+.social-icon {
+  /* Style your social media icons here */
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  color: var(--color1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* End About Artist Section */
+
+@media only screen and (max-width: 600px) {
+  .about-artist-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .artist-info .head {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .artist-info .head {
+    flex-direction: row; /* Revert back to row for slightly larger screens */
+  }
+  .follow_btn button {
+    font-size: 10px;
+  }
+}
+/* --------------------------------------------------- */
+/* Existing Styles */
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 600px) {
+  .head-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Ensures all absolutely positioned children are relative to this */
+  }
+
+  .left-side {
+    width: 100%;
+    align-items: center;
+    order: 2; /* Logo is ordered to appear logically after the cover, though visually it will be on top */
+    position: relative;
+    z-index: 2; /* Ensures the logo appears above the cover image */
+  }
+  .left-side .profile-info {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .left-side .profile-info span {
+    font-size: 9px;
+  }
+  .left-side .profile-info span h2 {
+    font-size: 12px;
+  }
+  .right-side {
+    width: 100%;
+    order: 1;
+    position: relative;
+  }
+
+  .right-side .cover-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* This will vertically center the content */
+    width: 100%;
+    position: relative; /* Needed for absolute positioning of the logo */
+  }
+
+  .right-side .cover-picture img {
+    width: 100%;
+    height: 30vh; /* Maintains aspect ratio */
+    position: relative; /* Ensure that this does not interfere with absolute positioning */
+    padding: 0% !important;
+    margin-left: 40px;
+    border-radius: 0%;
+  }
+
+  .left-side .profile-picture {
+    position: absolute;
+    top: 0%; /* Adjust this value to change how much of the logo overlaps */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfectly center the logo */
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden; /* Ensures no overflow */
+  }
+
+  .left-side .profile-picture img {
+    width: 100%;
+    height: auto;
+  }
+  .about-artist-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+  }
+  .follow_btn button {
+    margin-top: 8px;
+    font-size: 10px;
+  }
+  .artist-info .info span h2 {
+    font-size: 18px;
+  }
+  .artist-info .info span p {
+    font-size: 15px;
+  }
+  .products {
+    display: flex;
+    justify-content: space-around;
+    /* margin-left: 30px; */
+  }
+  .inputs {
+    padding: 0 65px 0 0px;
+    display: flex;
+  }
+
+  .range {
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 50px;
+  }
+
+  .range form label span {
+    font-size: 10px; /* Decrease font size for smaller screens */
+  }
+
+  .range form input[type="checkbox"] {
+    margin-right: 5px; /* Reduce margin between checkbox and text */
+  }
+}
