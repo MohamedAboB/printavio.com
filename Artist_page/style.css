@@ -1,0 +1,569 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  :root {
+    --color1: #00a7ff;
+    --color2: #215077;
+    --color3: rgb(163, 206, 255) 0%;
+    --color5: rgb(79, 156, 232);
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  main {
+    margin-top: 68px;
+    width: 100%;
+  }
+  
+  section {
+    padding: 0px 10px 30px 10px;
+    margin: 0 1%;
+    display: flex;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+  }
+  
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-side, .right-side {
+    flex: 1; /* Each side takes half of the container */
+}
+
+.additional-content {
+    width: 100%; /* Full width for the lower content */
+    margin-top: 20px; /* Space from the top content */
+}
+.left-side {
+    display: flex;
+    width: 47%; /* Adjust width as needed */
+    flex-direction: column;
+
+}
+/*  ----------- Start images style */
+.product-imgs {
+    display: flex;
+    flex-direction: row; /* Changed to row for side-by-side layout */
+    width: 100%;
+    align-items: start;
+    margin-bottom: 30px;
+}
+
+.main-img {
+    width: 80%; /* Larger area for main image */
+    flex-shrink: 0; /* Prevents resizing on flex container changes */
+    height: 500px;
+}
+.main-img, .small-img {
+    position: relative;
+    overflow: hidden;
+}
+.main-img img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the div without distorting */
+    border-radius: 10px;
+}
+
+.small-imgs-group {
+    display: flex;
+    flex-direction: column; /* Stack small images vertically */
+    justify-content: space-around;
+    width: 20%; /* Smaller area for small images */
+    margin-right: 10px; /* Space between small images and main image */
+}
+
+.small-img {
+    width: 100%; /* Full width of the container */
+    height: 120px; /* Fixed height for all small images */
+    margin-bottom: 5px; /* Space between small images */
+}
+
+.small-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border: none;
+    border-radius: 10px;
+}
+
+/*  ----------- End images style */
+
+/* ------  Start More Design style ---------- */
+
+.more-design {
+    width: 50%; /* Full width to match the product-imgs section */
+    padding-top: 20px; /* Space between product images and this section */
+}
+
+.title-designs {
+    text-align: left; /* Align the title to the left */
+    margin-bottom: 20px; /* Space between title and cards */
+    color: var(--color2);
+    
+}
+
+.designs {
+    display: flex;
+    justify-content: flex-start; /* Align design cards to the start */
+    gap: 5px; /* Space between each card */
+}
+
+.design-card {
+    width: calc(25% - 17px); /* Four items per row, adjusting for gap */
+    height: 120px; /* Fixed height for uniformity */
+    position: relative; /* For positioning images correctly */
+    overflow: hidden; /* Hide overflow */
+}
+
+.design-card img {
+    width: 65%;
+    height: 100%;
+    object-fit: cover; /* Cover the area without distorting */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    
+}
+
+/* ------  End  More Design style ---------- */
+
+
+.info-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* ----------- Start  Material style */
+
+.Materials {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f5f5f5; /* Light grey background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.Material-title {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and title */
+}
+.Material-title span{
+    color: var(--color2);
+}
+
+.material-symbols-outlined {
+    font-size: 24px; /* Larger icon for visibility */
+    color: var(--color1); /* Primary color for the icon */
+}
+
+.Material-title h3 {
+    margin: 0;
+    font-size: 18px; /* Appropriate size for the section title */
+    color: var(--color2); /* Dark color for contrast */
+}
+
+/* ----------- End  Material style */
+
+/* ------------ Start Features style */
+
+.Features {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f5f5f5; /* Light grey background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.Feature-title {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and title */
+}
+.Feature-title span{
+    color: var(--color2);
+}
+.material-symbols-outlined {
+    font-size: 24px; /* Larger icon for visibility */
+    color: var(--color1); /* Primary color for the icon */
+}
+/* ------------ Start Features style */
+
+/* ----------------- Start right side style ----------- */
+
+
+.right-side {
+    width: 53%; /* Adjust according to layout */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+.product-title{
+    margin-bottom: 50px;
+}
+.product-title h2 {
+    font-size: 50px; /* Large, prominent title */
+    font-weight: bold;
+    color: var(--color2); /* Dark color for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.product-title span {
+    font-size: 14px;
+    color: var(--color1); /* Subtle color for additional text */
+    display: block; /* Makes it a block-level element */
+    margin-bottom: 25px;
+}
+.product-title span a{
+    color: #0071ff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.price {
+    display: flex;
+    align-items: baseline; /* Align the baseline of the text */
+    gap: 10px; /* Space between current and old price */
+    margin-top: 15px; /* Space above the price section */
+    margin-bottom: 50px;
+}
+
+.price h3 {
+    font-size: 30px;
+    color: var(--color2); /* Eye-catching color for the price */
+    font-weight: bold;
+}
+
+.price span {
+    font-size: 15px;
+    color: rgb(255, 92, 92); /* Greyed out color for the old price */
+    text-decoration: line-through; /* Strike through for old price */
+}
+
+/* --------- Start color  */
+
+.color-container {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.color-container h5 {
+    font-size: 16px;
+    margin-bottom: 10px; /* Space between title and buttons */
+    color: var(--color2); /* Consistent color for subheaders */
+}
+
+.colors {
+    display: flex;
+    align-items: center;
+}
+
+.chose-color {
+    width: 40px; /* Fixed width for circular shape */
+    height: 40px; /* Fixed height for circular shape */
+    padding: 0; /* No padding needed */
+    margin-right: 15px; /* Space between buttons */
+    background-color: #f0f0f0; /* Default neutral background, will be overridden */
+    border: 2px solid #ddd; /* Slight border for button */
+    border-radius: 50%; /* Makes the button circular */
+    cursor: pointer; /* Cursor indicates button */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Example background colors for the buttons */
+.chose-color:nth-child(1) { background-color: #000000; } /* Black */
+.chose-color:nth-child(2) { background-color: #FF0000; } /* Red */
+.chose-color:nth-child(3) { background-color: #0000FF; } /* Blue */
+.chose-color:nth-child(4) { background-color: #00FF00; } /* Green */
+.chose-color:nth-child(5) { background-color: #00a7ff; } /* Yellow */
+.chose-color:nth-child(6) { background-color: #FFFFFF; } /* White */
+
+.chose-color:hover {
+    transform: scale(1.1); /* Enlarges button on hover */
+    border-color: var(--color1); /* Highlight color on hover */
+}
+
+
+
+/* --------- End color  */
+
+/* --------- Start Size --------- */
+.size-container {
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.size-container h5 {
+    font-size: 16px;
+    margin-bottom: 10px; /* Space between title and buttons */
+    color: var(--color2); /* Consistent color for subheaders */
+    margin-bottom: 10px;
+}
+
+.chose-size {
+    width: 40px;  /* Equal width and height for a perfect circle */
+    height: 40px; /* Adjust size as needed for your design */
+    padding: 0;   /* Padding set to 0 for text alignment */
+    line-height: 40px; /* Aligns text vertically in the center */
+    margin-right: 10px; /* Space between buttons */
+    background-color: #f0f0f0; /* Neutral background for the button */
+    border: none;
+    border-radius: 50%; /* Rounded corners for circular buttons */
+    cursor: pointer; /* Cursor indicates button */
+    font-size: 14px; /* Adjust font size if needed */
+    color: #333; /* Dark color for text on buttons */
+    text-align: center; /* Ensures text is centered horizontally */
+}
+
+.chose-size:hover {
+    background-color: var(--color5); /* Change on hover */
+    color: #fff; /* White text on hover */
+}
+
+
+/* --------- End Size --------- */
+
+.view-size {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+
+    color: var(--color2); /* Consistent with your color theme */
+
+    margin-bottom: 30px;
+}
+.view-size a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.view-size .material-symbols-outlined {
+    font-size: 40px; /* Slightly larger icon for visibility */
+    color: var(--color2);
+}
+
+.view-size a {
+    color: var(--color2); /* Ensures the link matches the text color */
+    font-weight: bold; /* Makes the text bold */
+}
+
+.btn-cart button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    gap: 8px; /* Space between icon and text */
+    padding: 12px 24px; /* Adequate padding for a button */
+    background-color: var(--color1); /* Primary button color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 25px; /* Rounded corners for the button */
+    font-size: 16px; /* Font size for the button text */
+    cursor: pointer; /* Indicates the button is clickable */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 30px;
+}
+.btn-cart span{
+    color: white;
+}
+
+.btn-cart button:hover {
+    background-color: var(--color5); /* Darker shade on hover */
+}
+
+.material-symbols-outlined {
+    font-size: 24px; /* Consistent icon size */
+}
+
+
+/*  ------------ Start shipping and returns */
+
+.shipping-returns {
+
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f5f5; /* Light grey background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.shipping-returns .title {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and title */
+}
+
+.shipping-returns .material-symbols-outlined {
+    font-size: 24px; /* Larger icon for visibility */
+    color: var(--color2); /* Primary color for the icon */
+}
+
+
+/*  ------------ End shipping and returns */
+
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Space from product images */
+}
+
+.left, .right {
+    width: 47%; /* Match width of left-side for symmetry */
+    display: flex;
+    flex-direction: column;
+}
+
+.Materials, .Features {
+    background-color: #f5f5f5; /* Light grey background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between sections */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.Material-title, .Feature-title {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and title */
+}
+
+.Material-title h3, .Feature-title h3 {
+    font-size: 18px; /* Appropriate size for the section title */
+    color: var(--color2); /* Dark color for contrast */
+    margin: 0; /* Remove default margin */
+}
+
+.material-symbols-outlined {
+    font-size: 24px; /* Larger icon for visibility */
+    color: var(--color1); /* Primary color for the icon */
+}
+
+.text p {
+    color: var(--color1); 
+    font-size: 16px; /* Adequate size for body text */
+    line-height: 1.5; /* Line height for better readability */
+    margin-top: 10px; /* Space above text */
+}
+
+.right {
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.shipping-returns .title {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and title */
+}
+
+.shipping-returns h3 {
+    font-size: 18px; /* Appropriate size for the section title */
+    color: var(--color2); /* Dark color for contrast */
+    margin: 0; /* Remove default margin */
+}
+
+
+/* -----------------  End side style ----------- */
+
+
+/* Base styles go above this line */
+
+/* Base styles and variable declarations are kept as previously defined */
+
+@media (max-width: 768px) {
+    .top-container, .info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side, .right-side, .left, .right {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .product-imgs {
+        flex-direction: column;
+    }
+
+    .main-img {
+        width: 100%; /* Full width of the main image */
+        height: inherit;
+    }
+    .main-img img{
+        width: 100%;
+    }
+
+    .small-imgs-group {
+        flex-direction: row; /* Horizontal scroll for small images */
+        overflow-x: auto;
+        width: 100%;
+        margin-top: 10px;
+        order: 2;
+    }
+
+    .small-img {
+        width: 25%; /* Adjust size to show multiple small images in a row */
+        margin-right: 10px; /* Space between small images */
+    }
+
+    .details, .more-design, .Materials, .Features, .shipping-returns {
+        width: 100%; /* Full width for detail sections */
+        padding: 15px; /* Reduced padding */
+        margin-top: 20px; /* Consistent margin for separation */
+    }
+
+    .design-card {
+        display: flex;
+        width: 50%; 
+    }
+    .product-title h2{
+        font-size: 35px ;
+    }
+    .price h3, .price span {
+        text-align: center;
+    }
+
+    .colors, .size {
+        flex-wrap: wrap; /* Wrap size and color options */
+    }
+
+    .chose-color, .chose-size {
+        margin-right: 5px; /* Reduce margin */
+        margin-bottom: 5px; /* Add bottom margin for wrap */
+    }
+    .chose-size{
+        font-size: 10px;
+        width: 13%;
+    }
+
+    .btn-cart button {
+        width: 100%; /* Button takes full width */
+        margin-top: 20px;
+    }
+
+    .view-size, .price, .color-container, .size-container {
+        align-items: center; /* Center alignment for better mobile layout */
+    }
+    
+    .view-size a, .price span {
+        text-align: center; /* Centered text within elements */
+    }
+    
+    .colors, .size {
+        justify-content: center; /* Center color and size options */
+    }
+    
+}
+
+
+
